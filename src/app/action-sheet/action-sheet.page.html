@@ -1,4 +1,12 @@
 <app-header titleActivity="Action Sheet"></app-header>
 <ion-content>
-  <h1>Activiti Action Sheet</h1>
+  <ion-button (click)="presentActionSheet()" color="warning" expand="block"
+    >hola</ion-button
+  >
+  <ion-list>
+    <ion-item *ngFor="let element of folders" (click)="presentActionSheet()">
+      <ion-icon slot="start" [name]="element.icon"></ion-icon>
+      <ion-label>{{ element.name }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
