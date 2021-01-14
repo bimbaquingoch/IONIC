@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'alertas',
+    loadChildren: () => import('./alertas/alertas.module').then( m => m.AlertasPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
+  {
+    path: 'tarjetas',
+    loadChildren: () => import('./tarjetas/tarjetas.module').then( m => m.TarjetasPageModule)
+  },
 ];
 
 @NgModule({
