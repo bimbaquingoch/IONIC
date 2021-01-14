@@ -1,2 +1,28 @@
-<app-header titleActivity="Tarjetas"></app-header>
-<ion-content> </ion-content>
+<app-header titleActivity="Imagenes"></app-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let objets of newObjets" (click)="person()">
+      <ion-avatar slot="start">
+        <img [src]="objets.img" [alt]="objets.alt" />
+      </ion-avatar>
+      <ion-label>{{ objets.label }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let card of cards">
+      <ion-card mod="ios" color="dark">
+        <img [src]="card.img" [alt]="card.alt" />
+        <ion-card-header>
+          <ion-card-title>
+            {{ card.title }}
+          </ion-card-title>
+          <ion-card-subtitle>{{ card.subtitle }}</ion-card-subtitle>
+          <ion-card-content>
+            {{ card.content }}
+          </ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
