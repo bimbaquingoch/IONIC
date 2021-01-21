@@ -8,18 +8,21 @@
       </ion-avatar>
       <ion-label>{{ person.name }}</ion-label>
       <ion-label>{{ person.gender }}</ion-label>
-      <ion-label>{{ person.location.name }}</ion-label>
+      <ion-label>{{ person.origin.name }}</ion-label>
     </ion-item>
   </ion-list>
 
   <ion-slides pager="true">
     <ion-slide *ngFor="let person of names">
       <ion-card mod="md" color="dark">
-        <img [src]="person.image" alt="" />
+        <img [src]="person.image" [alt]="person.name" />
         <ion-card-header>
           <ion-card-title>{{ person.name }}</ion-card-title>
           <ion-card-subtitle>{{ person.gender }}</ion-card-subtitle>
-          <ion-card-content>{{ person.location.name }}</ion-card-content>
+          <ion-card-content
+            >{{ person.location.name }}
+            <h3>{{ person.species }}</h3>
+          </ion-card-content>
         </ion-card-header>
       </ion-card>
     </ion-slide>
