@@ -21,7 +21,13 @@ export class HomePage implements OnInit{
       name:"Tarjetas",
       url:'/tarjetas',
       icon:"image-outline"
-    }]
+    },
+    {
+      name:'Deber',
+      url:'/deber',
+      icon:'planet-outline'
+    }
+  ]
 
   constructor() {}
   ngOnInit(){}

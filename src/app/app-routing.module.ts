@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'tarjetas',
     loadChildren: () => import('./tarjetas/tarjetas.module').then( m => m.TarjetasPageModule)
   },
+  {
+    path: 'deber',
+    loadChildren: () => import('./deber/deber.module').then( m => m.DeberPageModule)
+  },
 ];
 
 @NgModule({
