@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-const API = "https://rickandmortyapi.com/api/character/";
+const API = "https://rickandmortyapi.com/api/character/?page=2";
 
 @Injectable({
   providedIn: 'root'
