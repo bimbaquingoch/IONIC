@@ -2,7 +2,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let person of names">
+    <ion-item *ngFor="let person of personajes">
       <ion-avatar slot="start">
         <img [src]="person.image" alt="" />
       </ion-avatar>
@@ -13,7 +13,7 @@
   </ion-list>
 
   <ion-slides pager="true">
-    <ion-slide *ngFor="let person of names">
+    <ion-slide *ngFor="let person of personajes">
       <ion-card mod="md" color="dark">
         <img [src]="person.image" [alt]="person.name" />
         <ion-card-header>

@@ -11,16 +11,17 @@ import {RickandmortyService} from '../services/rickandmorty.service';
 })
 export class DeberPage implements OnInit {
 
-  names :any [] = [];
+  personajes :any [] = [];
 
   constructor(private rickandmortyservice:RickandmortyService) { }
 
   ngOnInit() {
   }
 
+  // se ejecuta una vez que se ha ejecutado el constructor
   ionViewDidEnter(){
     this.rickandmortyservice.getInfo().then((newinfo)=>{
-      this.names = newinfo.results;
+      this.personajes = newinfo.results;
      // console.log(this.names);
     })
   }
