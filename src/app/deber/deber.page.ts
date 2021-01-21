@@ -21,7 +21,7 @@ export class DeberPage implements OnInit {
   ionViewDidEnter(){
     this.rickandmortyservice.getInfo().then((newinfo)=>{
       this.names = newinfo.results;
-     console.log(this.names);
+     // console.log(this.names);
     })
   }
 }
