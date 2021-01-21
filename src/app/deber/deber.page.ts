@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-const fetchData = require ('./utils/fetchData.js')
+import {RickandmortyService} from '../services/rickandmorty.service';
+// const fetchData = require ('./utils/fetchData')
 
 const API = "https://rickandmortyapi.com/api/character/";
 
@@ -10,22 +11,28 @@ const API = "https://rickandmortyapi.com/api/character/";
 })
 export class DeberPage implements OnInit {
 
-  constructor() { }
+  caracter=[{},{}]
+
+  constructor(private rickandmortyservice:RickandmortyService) { }
 
   ngOnInit() {
   }
 
+  ionViewDidEnter(){
+    this.rickandmortyservice.getInfo().then((newinfo)=>{
+      for (let i = 0; i <20 ; i++) {
 
-}
-const consultApi= async (urlApi)=>{
-  try {
-      const data = await fetchData(urlApi)
-      const name = await fetchData(`${API}${data.results[0].id}`)
-      const origen = await fetchData(name.origen.url);      
-    console.log(origen.dimension)
-  } catch (error) {
-     console.error(error) 
+        this.caracter = newinfo.results[i].name;
+        var origin = newinfo.results[i].origin.name;
+        var gender = newinfo.results[i].gender;
+        var specie = newinfo.results[i].species;
+        console.log(this.caracter);
+        console.log(origin)
+        console.log(gender)
+        console.log(specie)
+
+      }
+    })
   }
 }
 
-consultApi(API);

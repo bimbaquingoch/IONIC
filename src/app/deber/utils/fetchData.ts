@@ -1,4 +1,4 @@
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 const fetchData = (urlApi) => {
   return new Promise((resolve, reject) => {
@@ -9,7 +9,7 @@ const fetchData = (urlApi) => {
       if (xhttp.readyState === 4) {
         xhttp.status === 200
           ? resolve(JSON.parse(xhttp.responseText))
-          : reject(new Error("err", urlApi));
+          : reject(new Error("err"));
       }
     };
     xhttp.send();
