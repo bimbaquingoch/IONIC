@@ -1,3 +1,27 @@
 <app-header titleActivity="DEBER"></app-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let person of names">
+      <ion-avatar slot="start">
+        <img [src]="person.image" alt="" />
+      </ion-avatar>
+      <ion-label>{{ person.name }}</ion-label>
+      <ion-label>{{ person.gender }}</ion-label>
+      <ion-label>{{ person.location.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let person of names">
+      <ion-card mod="ios" color="dark">
+        <img [src]="person.image" alt="" />
+        <ion-card-header>
+          <ion-card-title>{{ person.name }}</ion-card-title>
+          <ion-card-subtitle>{{ person.gender }}</ion-card-subtitle>
+          <ion-card-content>{{ person.location.name }}</ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
