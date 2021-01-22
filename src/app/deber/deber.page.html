@@ -14,14 +14,16 @@
 
   <ion-slides pager="true">
     <ion-slide *ngFor="let person of personajes">
-      <ion-card mod="md" color="dark">
+      <ion-card mod="ios" color="dark" navtive>
         <img [src]="person.image" [alt]="person.name" />
         <ion-card-header>
-          <ion-card-subtitle>{{ person.gender }}</ion-card-subtitle>
+          <ion-card-subtitle>Gender: {{ person.gender }}</ion-card-subtitle>
           <ion-card-title>{{ person.name }}</ion-card-title>
           <ion-card-content
-            >{{ person.location.name }}
-            <h3>{{ person.species }}</h3>
+            >Location: {{ person.location.name }}
+            <h3>Specie: {{ person.species }}</h3>
+            <h2>Type: {{ person.type }}</h2>
+            <ion-label>Origin: {{ person.origin.name }}</ion-label>
           </ion-card-content>
         </ion-card-header>
       </ion-card>
