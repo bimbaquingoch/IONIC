@@ -6,9 +6,21 @@
       <ion-avatar slot="start">
         <img [src]="person.image" [alt]="person.name" />
       </ion-avatar>
-      <ion-label>{{ person.name }}</ion-label>
-      <ion-label>{{ person.gender }}</ion-label>
-      <ion-label>{{ person.origin.name }}</ion-label>
+      <ion-label>
+        <h2>
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <strong>{{ person.name }}</strong>
+        </h2>
+        <h2>
+          <ion-icon name="transgender-outline" slot="start"></ion-icon>
+          {{ person.gender }}
+        </h2>
+      </ion-label>
+
+      <ion-label>
+        <ion-icon name="planet" slot="start"></ion-icon>
+        {{ person.origin.name }}
+      </ion-label>
     </ion-item>
   </ion-list>
 
@@ -18,7 +30,11 @@
         <img [src]="person.image" [alt]="person.name" />
         <ion-card-header>
           <ion-card-subtitle>Gender: {{ person.gender }}</ion-card-subtitle>
-          <ion-card-title>{{ person.name }}</ion-card-title>
+          <ion-card-title>
+            <strong>
+              {{ person.name }}
+            </strong>
+          </ion-card-title>
           <ion-card-content
             >Location: {{ person.location.name }}
             <h3>Specie: {{ person.species }}</h3>
