@@ -23,5 +23,3 @@ export class DeberPage implements OnInit {
     })
   }
 }
-
-
