@@ -26,7 +26,13 @@ export class HomePage implements OnInit{
       name:'Deber',
       url:'/deber',
       icon:'planet-outline'
+    },
+    {
+      name:'Nasa',
+      url:'/nasa',
+      icon:'planet-outline'
     }
+
   ]
 
   constructor() {}

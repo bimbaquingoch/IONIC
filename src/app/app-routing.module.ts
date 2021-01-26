@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'deber',
     loadChildren: () => import('./deber/deber.module').then( m => m.DeberPageModule)
   },
+  {
+    path: 'nasa',
+    loadChildren: () => import('./nasa/nasa.module').then( m => m.NasaPageModule)
+  },
 ];
 
 @NgModule({
