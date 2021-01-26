@@ -1,29 +1,6 @@
 <app-header titleActivity="NASA"></app-header>
 
 <ion-content>
-  <!-- <ion-list> -->
-  <!--   <ion-item *ngFor="let obj of marte"> -->
-  <!--     <ion-avatar slot="start"> -->
-  <!--       <img [src]="obj.img_src" [alt]="obj.sol" /> -->
-  <!--     </ion-avatar> -->
-  <!--     <ion-label> -->
-  <!--       <h2> -->
-  <!--         <ion-icon name="person-outline" slot="start"></ion-icon> -->
-  <!--         <strong>{{ obj.camera.name }}</strong> -->
-  <!--       </h2> -->
-  <!--       <h2> -->
-  <!--         <ion-icon name="transgender-outline" slot="start"></ion-icon> -->
-  <!--         {{ obj.rover.name }} -->
-  <!--       </h2> -->
-  <!--     </ion-label> -->
-
-  <!--     <ion-label> -->
-  <!--       <ion-icon name="planet" slot="start"></ion-icon> -->
-  <!--       {{ obj.earth_date }} -->
-  <!--     </ion-label> -->
-  <!--   </ion-item> -->
-  <!-- </ion-list> -->
-
   <ion-slides pager="false">
     <ion-slide *ngFor="let obj of marte">
       <ion-card mod="ios" color="dark" navtive>
@@ -38,7 +15,7 @@
           </ion-card-title>
           <ion-card-content
             >Status: {{ obj.rover.status }}
-            <h3>ID: {{ obj.rover.id }}</h3>
+            <h3>ID: {{ obj.id }}</h3>
             <ion-label>Full Name: {{ obj.camera.full_name }}</ion-label>
           </ion-card-content>
         </ion-card-header>
