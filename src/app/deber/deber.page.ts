@@ -1,25 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import {RickandmortyService} from '../services/rickandmorty.service';
+import { Component, OnInit } from "@angular/core";
+import { RickandmortyService } from "../services/rickandmorty.service";
 
 @Component({
-  selector: 'app-deber',
-  templateUrl: './deber.page.html',
-  styleUrls: ['./deber.page.scss'],
+  selector: "app-deber",
+  templateUrl: "./deber.page.html",
+  styleUrls: ["./deber.page.scss"],
 })
 export class DeberPage implements OnInit {
+  personajes: any[] = [];
 
-  personajes :any [] = [];
+  constructor(private rickandmortyservice: RickandmortyService) {}
 
-  constructor(private rickandmortyservice:RickandmortyService) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // se ejecuta una vez que se ha ejecutado el constructor
-  ionViewDidEnter(){
-    this.rickandmortyservice.getInfo().then((newinfo)=>{
+  ionViewDidEnter() {
+    this.rickandmortyservice.getInfo().then((newinfo) => {
       this.personajes = newinfo.results;
-     // console.log(this.names);
-    })
+      // console.log(this.names);
+    });
   }
 }
