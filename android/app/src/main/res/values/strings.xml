@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">pruebaAppSlides</string>
-    <string name="title_activity_main">pruebaAppSlides</string>
-    <string name="package_name">prueba.slides.onePiece</string>
-    <string name="custom_url_scheme">prueba.slides.onePiece</string>
-</resources>
